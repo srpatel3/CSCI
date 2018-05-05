@@ -41,17 +41,8 @@ def computeTDIDF(tfBow,idfs):
 
 
 # Actually deals with clustering
-def documentClustering():
-    docA = "this cat sat on my face"
-    docB = "this god sat on my bed"
-    docC = "this cat sit on my bed"
-    bowA = docA.split(" ")
-    bowB = docB.split(" ")
-    bowC = docC.split(" ")
-    listBow = []
-    listBow.append(bowA)
-    listBow.append(bowB)
-    listBow.append(bowC)
+def documentClustering(listBow):
+
     vocab = set()
     for bow in listBow:
         vocab = vocab.union(set(bow))
@@ -63,19 +54,21 @@ def documentClustering():
     for i in range(0,len(listBow)):
         for word in listBow[i]:
             listDict[i][word] += 1
-
-    listtfBow = []
-    for i in range(0,len(listBow)):
-        listtfBow.append(computeTF(listDict[i],listBow[i]))
-
-    idfs = computeIDF(listDict)
-
-    # Actually calculating TFIDF
-    listTFIDF = []
-    for i in range(0,len(listBow)):
-        listTFIDF.append(computeTDIDF(listtfBow[i],idfs))
-
-    print pd.DataFrame(listTFIDF)
+#    return pd.DataFrame(listDict)
+    return listDict
+#    listtfBow = []
+#    for i in range(0,len(listBow)):
+#        listtfBow.append(computeTF(listDict[i],listBow[i]))
+#    
+#    idfs = computeIDF(listDict)
+#
+#    # Actually calculating TFIDF
+#    listTFIDF = []
+#    for i in range(0,len(listBow)):
+#        listTFIDF.append(computeTDIDF(listtfBow[i],idfs))
+##    return listTFIDF
+##    print listTFIDF[0]
+#    return listTFIDF
 
 
 
