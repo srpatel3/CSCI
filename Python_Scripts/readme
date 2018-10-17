@@ -1,0 +1,15 @@
+FUNCTIONAL PROGRAMMING 
+ASSIGNMENT1
+Author : Shirish Patel
+
+I have removed the test code from source file and tried to keep only new code in this file. All the test cases for all the functions are 
+there, commented out. For running any of them you can remove the commens for that sections and Run it.
+
+For simplify function I have added some functionalities like x*1 = x, x*0 = 0
+Same Goes for division x/1 = x and 0/x = 0
+For Cosine and Sine functions I have added Const return for 0 and 90 values of Cosine and Sine.
+
+
+The code I have submitted is solely my own and I have to taken any external help.
+
+If you have any question at any point, I will be more than happy to clear it out.
