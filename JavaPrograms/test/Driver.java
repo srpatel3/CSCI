@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 class Driver{
     public static void main(String[] args) {
         Scanner inFromKey = new Scanner(System.in);
@@ -9,9 +10,12 @@ class Driver{
             input = inFromKey.nextInt();
             switch (input) {
                 case 1:
-                    
+                    System.out.println("You have selected First Option");
                     break;
-            
+                case 2:
+                    System.out.println("You have selected second option");
+                    break;
+
                 default:
                     break;
             }
