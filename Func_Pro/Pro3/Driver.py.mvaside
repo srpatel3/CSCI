@@ -1,0 +1,30 @@
+def addItem():
+	print("Inside Add Item")
+
+def removeItem():
+	print("Remove Item")
+	
+def Checkout():
+	print("Checking Out")
+
+
+
+def cartAction(actionNo):
+	actions={
+		1 : addItem,
+		2 : removeItem,
+		3 : Checkout
+		}
+	func = actions.get(actionNo)
+	func()
+
+
+def main():
+	input = 0
+	while not input == 3:
+		print("1.Add Item\n2.Remove Item\n3.Check out\n")
+		input = int(raw_input("Please Enter Your Choice...:"));
+		cartAction(input)
+				
+	print "Thank You..."
+main()
