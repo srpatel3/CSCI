@@ -1,0 +1,69 @@
+All the work I have submitted is my own and I have not violated any UofM honor code.
+This file will serve you as a guide to run and test the program
+
+//Abstraction by method and data
+//only information needed to perform functionalities will be available to user
+Driver class:
+	Serves as a driver for other class. 
+	Initiate and maintain different methods. 
+	Organize the execution of a program. 
+	Provides command line interface to users for accessing application. 
+	User can :
+		1. Add Item to cart
+		2. Remove item from cart
+		3. Check Out
+		4. View Cart content
+		5. Cancel transaction
+Item class:
+	Object class contains information about each Item
+		Have name, catagoty, code, Quantity, unit, price as Object variables
+		Setters and getter methods to access variables
+
+User class:
+	Have information about user
+		userID as a key and username as a value for a now
+		If we need to make changes in future additional information must be 
+added here, like loyal customer, total purchase etc.
+
+
+Database class:
+	maintains two databases:
+		Item database
+			Dictionary of Item objects with itemCode as a key and Item 
+object as a value
+			itemCode is a concatination of item's catagory and code both 
+are represented as numbers for now	
+ 
+		user database
+			Maintains dictionary of User type objects with userID as key 
+and User object as a value
+
+Cart class:
+	contains each user's cart information
+	Initialized database object as a class variable so that multiple Object of 
+cart can access the same database, which they should. 
+	implements methods such as addITem, removeItem, checkOut, ViewCart.
+
+
+Overview : 
+	At the starting of program database will be loaded into memory, database will 
+be read from inventory.csv file. Then user can perform the actions he/she wants and 
+then can either checkout or cancle the transaction. If user sucessfully can check out 
+then Available quantities will be updated in database. After checkout a state of 
+database will be written to inventory2.csv file to use it in future reference.
+
+
+GuidLine for inputs:
+
+itemCode		itemName
+11111			Apple
+11113			Strawberry
+11112			Oranges
+11115			Banana
+11114			Quiona
+10111			TShirt-B
+10112			TShirt-G
+10223			Chair
+
+It should ask for according unit for input for example banana unit is lb, Quiona pkt and apple Item
+
