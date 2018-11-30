@@ -1,0 +1,21 @@
+Exam "Curriculum Test"
+
+Question ["curriculum", "course"] "Which of the following is a required course?"
+Hint "It is a 400-level course."
+Choice         "CSci 323" Feedback "Systems Programming is elective."
+Choice correct "CSci 450" Feedback "Programming Languages is core."
+Choice         "CSci 525" Feedback "Compiler Construction is elective."
+Question ["language","course"]
+	"What one of the following languages is used in CSci 556?"
+Choice         "Lua" 
+Choice         "Elixir"
+Choice         "Scala"
+Choice         "Haskell"
+Choice correct "Python 3"
+Choice         "Rust"
+    
+Question "Are ready for Thanksgiving Break?"
+Hint "Is this a valid question?"
+Choice correct "Yes"
+Choice correct "No"
+Choice         "Maybe"

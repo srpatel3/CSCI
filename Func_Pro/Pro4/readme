@@ -1,0 +1,7 @@
+test.py : contains grammer to parse input. I have followed your code example to write grammer. I have used parsita to parse the text. At this moment code does not handle exceptions for the correct 
+cases it works fine.
+
+AST.py : contains logic to format the output and return it to parsita for printing. At this moment it will only print the Question and choices. But all the other metadata like feedback for choice,
+whether the choice is correct or not, Hint for the question are being saved in a state variables for later use. 
+
+
